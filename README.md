@@ -5,6 +5,8 @@ The project uses a hybrid retrieval approach during document ingestion and retri
 Summary:
 This project combines hybrid retrieval with large language model generation to create a document-aware conversational application.
 ingestion_hybrid.py is responsible for transforming the document knowledge base into a searchable vector representation in Pinecone, while chatbot_hybrid_rag.py handles user queries, retrieves and reranks relevant information, constructs the context, and uses GPT-4o to generate the final response.
+
+```text
               DOCUMENT KNOWLEDGE BASE
                        │
                        ▼
@@ -40,6 +42,7 @@ ingestion_hybrid.py is responsible for transforming the document knowledge base 
                        ▼
                  Final Response
 
+```
 
 Architecture
 The application consists of two primary Python scripts:
