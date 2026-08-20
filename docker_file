@@ -1,0 +1,17 @@
+# Use the official Python image as a base
+FROM python:3.9-slim
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the current directory contents into the container
+COPY . /app
+
+# Install the necessary packages (including pip and dependencies)
+RUN pip install --no-cache-dir -r requirementsA.txt
+
+# Expose the port Streamlit uses (8501)
+EXPOSE 8501
+
+# Command to run the Streamlit app
+CMD ["streamlit", "run", "chatbot_hybrid_rag.py"]
